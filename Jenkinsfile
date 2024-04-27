@@ -8,10 +8,10 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh '/home/guru/slaveDD2/apache-maven-3.9.0/bin/mvn install'
+			  sh '/home/devops/devops_tool/apache-maven-3.9.6/bin/mvn install'
 	                 }}
 		stage('Deployment'){
 		   steps {
-		sh 'cp target/flipkart.war /home/swapnil/Documents/DevOps-Software/apache-tomcat-9.0.79/webapps'
+		sh 'cp target/pipeline.war /home/devops/devops_tool/apache-tomcat-9.0.88/webapps'
 			}}	
 }}
