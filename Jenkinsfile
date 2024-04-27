@@ -20,12 +20,11 @@ pipeline {
         	sh 'cp target/pipeline.war /home/devops/devops_tool/apache-tomcat-9.0.88/webapps'
         	echo "deployment has been done on QA!"
 			 }
-			elif ( env.ENVIRONMENT == 'UAT' ){
+			else ( env.ENVIRONMENT == 'UAT' ){
     		sh 'cp target/pipeline.war /home/devops/devops_tool/apache-tomcat-9.0.88/webapps'
     		echo "deployment has been done on UAT!"
 			}
 			echo "deployment has been done!"
-			fi
 			
 			}}}	
 }}
