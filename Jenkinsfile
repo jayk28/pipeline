@@ -30,4 +30,10 @@ pipeline {
 				}
 			}
 		}
-	}}
+	}
+        post {
+		always {
+			emailext attachLog: true, body: '', compressLog: true, recipientProviders: [buildUser()], subject: 'pipeline', to: 'jaykamble370@gmail.com'
+		}
+	}
+}
