@@ -14,10 +14,10 @@ pipeline {
             steps {
                 script {
                     if (env.ENV == 'QA') {
-                        sh 'cp target/slack.war /home/devops/devops_tool/apache-tomcat-9.0.88/webapps'
+                        sh 'cp target/slacdk.war /home/devops/devops_tool/apache-tomcat-9.0.88/webapps'
                         echo "Deployment has been COMPLETED on QA!"
-                    } else if (env.ENV == 'UAT') {
-                        sh 'cp target/slacfk.war /home/devops/devops_tool/apache-tomcat-9.0.88/webapps'
+                    } else if (env.ENV == 'DEV') {
+                        sh 'cp target/slack.war /home/devops/devops_tool/apache-tomcat-9.0.88/webapps'
                         echo "Deployment has been done on UAT!"
                     }
                 }
