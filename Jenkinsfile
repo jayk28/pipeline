@@ -26,7 +26,7 @@ pipeline {
 		stage('Notify') {
 			steps {
 				script {
-					slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#april', color: 'good', message: 'welcome', teamDomain: 'devops', tokenCredentialId: 'ae7b5a96-36d0-4613-b5d6-b6147bfd3668'
+					slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'april', color: 'good', failOnError: true, message: 'hi', teamDomain: 'devops', tokenCredentialId: 'ae7b5a96-36d0-4613-b5d6-b6147bfd3668'
 				}
 			}
 		}
